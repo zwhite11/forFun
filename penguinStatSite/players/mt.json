@@ -29,8 +29,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 1,
-            "plusMinus": 5
-            
+            "plusMinus": 5            
         },
         {        
             "opponent": "Latrobe",
@@ -87,8 +86,8 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": -2
-            
-        }]   
+            "plusMinus": -2            
+        }
+    ]   
     
 }

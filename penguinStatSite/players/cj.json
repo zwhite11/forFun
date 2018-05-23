@@ -1,7 +1,8 @@
 {
     "name": "Clair Jones",
     "stats": 
-        [{
+        [
+        {
             "opponent": "Burnie",
             "location": "H",
             "result": "W",
@@ -57,8 +58,7 @@
             "blkr": 1,
             "pf": 0,
             "flson": 2,
-            "plusMinus": 11
-            
+            "plusMinus": 11            
         },
         {        
             "opponent": "Latrobe",
@@ -145,8 +145,7 @@
             "blkr": 0,
             "pf": 2,
             "flson": 1,
-            "plusMinus": -4
-            
+            "plusMinus": -4            
         },
         {        
             "opponent": "Smithton",
@@ -204,8 +203,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": 2
-            
+            "plusMinus": 2            
         },
         {        
             "opponent": "Wynyard",
@@ -234,8 +232,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 1,
-            "plusMinus": -1
-            
+            "plusMinus": -1            
         },
         {        
             "opponent": "Latrobe",
@@ -264,8 +261,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 1,
-            "plusMinus": -4
-            
+            "plusMinus": -4            
         },
         {        
             "opponent": "Ulverstone",
@@ -294,8 +290,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": 2
-            
+            "plusMinus": 2            
         },
         {        
             "opponent": "Somerset",
@@ -324,9 +319,8 @@
             "blkr": 0,
             "pf": 0,
             "flson": 1,
-            "plusMinus": -10
-            
-        } ,
+            "plusMinus": -10            
+        },
         {        
             "opponent": "Smithton",
             "location": "H",
@@ -355,8 +349,7 @@
             "pf": 0,
             "flson": 1,
             "plusMinus": 17
-            
-        } ,
+        },
         {        
             "opponent": "Burnie",
             "location": "H",
@@ -385,6 +378,7 @@
             "pf": 0,
             "flson": 0,
             "plusMinus": 4
-        }  ]   
+        } 
+    ]   
     
 }

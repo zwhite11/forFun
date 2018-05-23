@@ -581,6 +581,8 @@
         playerStats.lossAverages = []
         playerStats.lossAverages.push(lossAverages);
         // console.log("lossAverages", playerStats.lossAverages);
+
+        console.log("allstats", playerStats);
         
     }
     

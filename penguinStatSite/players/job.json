@@ -1,7 +1,8 @@
 {
     "name": "Joel Beveridge",
     "stats": 
-        [{
+        [
+        {
             "opponent": "Burnie",
             "location": "H",
             "result": "W",
@@ -57,8 +58,7 @@
             "blkr": 0,
             "pf": 3,
             "flson": 1,
-            "plusMinus": -28
-            
+            "plusMinus": -28            
         },
         {        
             "opponent": "Latrobe",
@@ -145,8 +145,7 @@
             "blkr": 0,
             "pf": 2,
             "flson": 1,
-            "plusMinus": 6
-            
+            "plusMinus": 6            
         },
         {        
             "opponent": "Devonport",
@@ -175,8 +174,7 @@
             "blkr": 1,
             "pf": 2,
             "flson": 0,
-            "plusMinus": 9
-            
+            "plusMinus": 9            
         },
         {        
             "opponent": "Burnie",
@@ -205,8 +203,7 @@
             "blkr": 0,
             "pf": 3,
             "flson": 0,
-            "plusMinus": -5
-            
+            "plusMinus": -5            
         },
         {        
             "opponent": "Wynyard",
@@ -235,8 +232,7 @@
             "blkr": 0,
             "pf": 2,
             "flson": 0,
-            "plusMinus": 7
-            
+            "plusMinus": 7            
         },
         {        
             "opponent": "Latrobe",
@@ -265,8 +261,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 1,
-            "plusMinus": -2
-            
+            "plusMinus": -2            
         },
         {        
             "opponent": "Ulverstone",
@@ -295,8 +290,7 @@
             "blkr": 0,
             "pf": 4,
             "flson": 0,
-            "plusMinus": 20
-            
+            "plusMinus": 20            
         },
         {        
             "opponent": "Somerset",
@@ -325,9 +319,8 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": 26
-            
-        } ,
+            "plusMinus": 26            
+        },
         {        
             "opponent": "Smithton",
             "location": "H",
@@ -355,8 +348,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 0,
-            "plusMinus": 11
-            
+            "plusMinus": 11            
         },
         {        
             "opponent": "Burnie",
@@ -386,6 +378,7 @@
             "pf": 2,
             "flson": 1,
             "plusMinus": 17
-        } ]   
+        } 
+    ]   
     
 }

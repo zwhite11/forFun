@@ -1,7 +1,8 @@
 {
     "name": "Ellie Collins",
     "stats": 
-        [{
+        [
+        {
             "opponent": "Burnie",
             "location": "H",
             "result": "W",
@@ -57,8 +58,7 @@
             "blkr": 2,
             "pf": 3,
             "flson": 5,
-            "plusMinus": 36
-            
+            "plusMinus": 36            
         },
         {        
             "opponent": "Latrobe",
@@ -145,8 +145,7 @@
             "blkr": 1,
             "pf": 3,
             "flson": 1,
-            "plusMinus": -7
-            
+            "plusMinus": -7            
         },
         {        
             "opponent": "Devonport",
@@ -175,8 +174,7 @@
             "blkr": 1,
             "pf": 1,
             "flson": 3,
-            "plusMinus": -6
-            
+            "plusMinus": -6            
         },
         {        
             "opponent": "Smithton",
@@ -205,8 +203,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 1,
-            "plusMinus": 33
-            
+            "plusMinus": 33            
         },
         {        
             "opponent": "Burnie",
@@ -235,8 +232,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 2,
-            "plusMinus": 39
-            
+            "plusMinus": 39            
         },
         {        
             "opponent": "Wynyard",
@@ -265,8 +261,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": 35
-            
+            "plusMinus": 35            
         },
         {        
             "opponent": "Latrobe",
@@ -295,8 +290,7 @@
             "blkr": 1,
             "pf": 1,
             "flson": 2,
-            "plusMinus": 16
-            
+            "plusMinus": 16            
         },
         {        
             "opponent": "Ulverstone",
@@ -325,8 +319,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 3,
-            "plusMinus": 10
-            
+            "plusMinus": 10            
         },
         {        
             "opponent": "Somerset",
@@ -355,8 +348,7 @@
             "blkr": 4,
             "pf": 1,
             "flson": 3,
-            "plusMinus": 16
-            
+            "plusMinus": 16            
         },
         {        
             "opponent": "Devonport",
@@ -385,9 +377,8 @@
             "blkr": 1,
             "pf": 2,
             "flson": 4,
-            "plusMinus": 5
-            
-        } ,
+            "plusMinus": 5            
+        },
         {        
             "opponent": "Smithton",
             "location": "H",
@@ -415,8 +406,7 @@
             "blkr": 2,
             "pf": 2,
             "flson": 2,
-            "plusMinus": 35
-            
+            "plusMinus": 35            
         },
         {        
             "opponent": "Burnie",
@@ -446,6 +436,7 @@
             "pf": 2,
             "flson": 3,
             "plusMinus": 39
-        } ]   
+        } 
+    ]   
     
 }

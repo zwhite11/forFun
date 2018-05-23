@@ -29,8 +29,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": -9
-            
+            "plusMinus": -9            
         },
         {        
             "opponent": "Smithton",
@@ -59,9 +58,8 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": -2
-            
+            "plusMinus": -2            
         }
-        ]   
+    ]   
     
 }

@@ -29,8 +29,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 1,
-            "plusMinus": 3
-            
+            "plusMinus": 3            
         },
         {        
             "opponent": "Latrobe",
@@ -117,8 +116,7 @@
             "blkr": 0,
             "pf": 5,
             "flson": 1,
-            "plusMinus": 0
-            
+            "plusMinus": 0            
         },
         {        
             "opponent": "Devonport",
@@ -147,8 +145,7 @@
             "blkr": 0,
             "pf": 2,
             "flson": 1,
-            "plusMinus": 5
-            
+            "plusMinus": 5            
         },
         {        
             "opponent": "Smithton",
@@ -206,8 +203,7 @@
             "blkr": 0,
             "pf": 3,
             "flson": 4,
-            "plusMinus": 1
-            
+            "plusMinus": 1            
         },
         {        
             "opponent": "Wynyard",
@@ -236,8 +232,7 @@
             "blkr": 0,
             "pf": 3,
             "flson": 0,
-            "plusMinus": 6
-            
+            "plusMinus": 6            
         },
         {        
             "opponent": "Latrobe",
@@ -266,8 +261,7 @@
             "blkr": 2,
             "pf": 2,
             "flson": 1,
-            "plusMinus": 15
-            
+            "plusMinus": 15            
         },
         {        
             "opponent": "Ulverstone",
@@ -296,8 +290,7 @@
             "blkr": 0,
             "pf": 4,
             "flson": 2,
-            "plusMinus": -2
-            
+            "plusMinus": -2            
         },
         {        
             "opponent": "Somerset",
@@ -326,8 +319,8 @@
             "blkr": 0,
             "pf": 3,
             "flson": 2,
-            "plusMinus": 24
-            
-        }   ]   
+            "plusMinus": 24            
+        }   
+    ]   
     
 }

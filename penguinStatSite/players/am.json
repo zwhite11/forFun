@@ -1,7 +1,8 @@
 {
     "name": "Arizona Murdoch",
     "stats": 
-        [{
+        [
+        {
             "opponent": "Burnie",
             "location": "H",
             "result": "W",
@@ -58,7 +59,6 @@
             "pf": 0,
             "flson": 0,
             "plusMinus": -2
-            
         },
         {        
             "opponent": "Latrobe",
@@ -146,7 +146,6 @@
             "pf": 0,
             "flson": 0,
             "plusMinus": 5
-            
         },
         {        
             "opponent": "Wynyard",
@@ -175,8 +174,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": 0
-            
+            "plusMinus": 0            
         },
         {        
             "opponent": "Latrobe",
@@ -205,8 +203,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": -1
-            
+            "plusMinus": -1            
         },
         {        
             "opponent": "Somerset",
@@ -236,8 +233,7 @@
             "pf": 0,
             "flson": 0,
             "plusMinus": -10
-            
-        } ,
+        },
         {        
             "opponent": "Smithton",
             "location": "H",
@@ -265,9 +261,8 @@
             "blkr": 0,
             "pf": 0,
             "flson": 1,
-            "plusMinus": 1
-            
-        } ,
+            "plusMinus": 1            
+        },
         {        
             "opponent": "Burnie",
             "location": "H",

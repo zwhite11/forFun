@@ -29,8 +29,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 2,
-            "plusMinus": 21
-            
+            "plusMinus": 21            
         },
         {        
             "opponent": "Latrobe",
@@ -117,8 +116,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 0,
-            "plusMinus": -15
-            
+            "plusMinus": -15            
         },
         {        
             "opponent": "Smithton",
@@ -176,8 +174,7 @@
             "blkr": 1,
             "pf": 0,
             "flson": 0,
-            "plusMinus": 27
-            
+            "plusMinus": 27            
         },
         {        
             "opponent": "Wynyard",
@@ -206,8 +203,7 @@
             "blkr": 1,
             "pf": 2,
             "flson": 2,
-            "plusMinus": 34
-            
+            "plusMinus": 34            
         },
         {        
             "opponent": "Latrobe",
@@ -236,8 +232,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 3,
-            "plusMinus": 17
-            
+            "plusMinus": 17            
         },
         {        
             "opponent": "Ulverstone",
@@ -266,8 +261,7 @@
             "blkr": 1,
             "pf": 2,
             "flson": 1,
-            "plusMinus": 15
-            
+            "plusMinus": 15            
         },
         {        
             "opponent": "Somerset",
@@ -296,8 +290,7 @@
             "blkr": 0,
             "pf": 2,
             "flson": 1,
-            "plusMinus": 2
-            
+            "plusMinus": 2            
         },
         {        
             "opponent": "Devonport",
@@ -326,9 +319,8 @@
             "blkr": 0,
             "pf": 3,
             "flson": 1,
-            "plusMinus": -5
-            
-        } ,
+            "plusMinus": -5            
+        },
         {        
             "opponent": "Smithton",
             "location": "H",
@@ -356,8 +348,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": 27
-            
+            "plusMinus": 27            
         },
         {        
             "opponent": "Burnie",
@@ -387,6 +378,7 @@
             "pf": 0,
             "flson": 0,
             "plusMinus": 29
-        }   ]   
+        }   
+    ]   
     
 }

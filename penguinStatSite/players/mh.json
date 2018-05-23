@@ -1,7 +1,8 @@
 {
     "name": "Maddison Hayward",
     "stats": 
-        [{
+        [
+        {
             "opponent": "Burnie",
             "location": "H",
             "result": "W",
@@ -57,8 +58,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 2,
-            "plusMinus": 25
-            
+            "plusMinus": 25            
         },
         {        
             "opponent": "Latrobe",
@@ -145,8 +145,7 @@
             "blkr": 0,
             "pf": 5,
             "flson": 4,
-            "plusMinus": -2
-            
+            "plusMinus": -2            
         },
         {        
             "opponent": "Devonport",
@@ -175,8 +174,7 @@
             "blkr": 0,
             "pf": 3,
             "flson": 5,
-            "plusMinus": -14
-            
+            "plusMinus": -14            
         },
         {        
             "opponent": "Smithton",
@@ -234,8 +232,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 1,
-            "plusMinus": 31
-            
+            "plusMinus": 31            
         },
         {        
             "opponent": "Wynyard",
@@ -264,8 +261,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 5,
-            "plusMinus": 31
-            
+            "plusMinus": 31            
         },
         {        
             "opponent": "Latrobe",
@@ -294,8 +290,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 4,
-            "plusMinus": 18
-            
+            "plusMinus": 18            
         },
         {        
             "opponent": "Ulverstone",
@@ -324,8 +319,7 @@
             "blkr": 0,
             "pf": 5,
             "flson": 4,
-            "plusMinus": 13
-            
+            "plusMinus": 13            
         },
         {        
             "opponent": "Devonport",
@@ -354,9 +348,8 @@
             "blkr": 0,
             "pf": 2,
             "flson": 4,
-            "plusMinus": -1
-            
-        } ,
+            "plusMinus": -1            
+        },
         {        
             "opponent": "Smithton",
             "location": "H",
@@ -384,8 +377,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 1,
-            "plusMinus": 15
-            
+            "plusMinus": 15            
         },
         {        
             "opponent": "Burnie",
@@ -415,6 +407,7 @@
             "pf": 2,
             "flson": 3,
             "plusMinus": 36
-        }  ] 
+        }  
+    ] 
     
 }

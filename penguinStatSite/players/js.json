@@ -1,6 +1,7 @@
 {
     "name": "Josh Stafford",
-    "stats": [
+    "stats": 
+        [
         {        
             "opponent": "Smithton",
             "location": "A",
@@ -28,8 +29,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 1,
-            "plusMinus": -2
-            
+            "plusMinus": -2            
         },
         {        
             "opponent": "Ulverstone",
@@ -58,8 +58,7 @@
             "blkr": 0,
             "pf": 1,
             "flson": 0,
-            "plusMinus": -4
-            
+            "plusMinus": -4            
         },
         {        
             "opponent": "Devonport",
@@ -88,9 +87,8 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": -7
-            
-        } ,
+            "plusMinus": -7            
+        },
         {        
             "opponent": "Smithton",
             "location": "H",
@@ -118,8 +116,7 @@
             "blkr": 1,
             "pf": 0,
             "flson": 0,
-            "plusMinus": -3
-            
+            "plusMinus": -3            
         },
         {        
             "opponent": "Burnie",
@@ -149,6 +146,7 @@
             "pf": 0,
             "flson": 0,
             "plusMinus": -5
-        }]
+        }
+    ]
     
 }

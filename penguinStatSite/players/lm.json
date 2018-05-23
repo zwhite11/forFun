@@ -29,8 +29,7 @@
             "blkr": 0,
             "pf": 0,
             "flson": 0,
-            "plusMinus": 5
-            
+            "plusMinus": 5            
         },
         {        
             "opponent": "Devonport",
@@ -59,9 +58,8 @@
             "blkr": 0,
             "pf": 0,
             "flson": 2,
-            "plusMinus": 4
-            
-        } ,
+            "plusMinus": 4            
+        },
         {        
             "opponent": "Smithton",
             "location": "H",
@@ -89,8 +87,7 @@
             "blkr": 0,
             "pf": 3,
             "flson": 2,
-            "plusMinus": 45
-            
+            "plusMinus": 45            
         },
         {        
             "opponent": "Burnie",
@@ -120,6 +117,7 @@
             "pf": 1,
             "flson": 1,
             "plusMinus": 22
-        }]   
+        }
+    ]   
     
 }
