@@ -1,3 +1,6 @@
+/**
+ * controller for handling player stats - overall, home games, away games, wins, and losses
+ */
 (function () {
     'use strict';
     
@@ -8,12 +11,10 @@
     function StatsController(PlayerDataService, stats, name) {
         var playerStats = this;
         playerStats.stats = stats;
-        playerStats.name = name;
-
-   
+        playerStats.name = name;   
         
         
-        //initialize stats to 0
+        // initialize stats to 0
         var totals = {};
         totals.mins,totals.pts,totals.fgm,totals.fga,totals.twoptm,totals.twopta,totals.threeptm,totals.threepta,totals.ftm,totals.fta,totals.oreb,totals.dreb,totals.reb,totals.ast,totals.to,totals.stl,totals.blk,totals.blkr,totals.pf,totals.flson,totals.plusminus;
 
@@ -21,14 +22,16 @@
         totals.pts=totals.fgm=totals.fga=totals.twoptm=totals.twopta=totals.threeptm=totals.threepta=totals.ftm=totals.fta=totals.oreb=totals.dreb=totals.reb=totals.ast=totals.to=totals.stl=totals.blk=totals.blkr=totals.pf=totals.flson=totals.plusminus=totals.mins;
 
         var gamesPlayed;
+        //  if the player has no stats, they have played no games.
         if(playerStats.stats == null){
             gamesPlayed = 0;
         }
+        // otherwise, games played = length of stats array
         else{
             gamesPlayed = playerStats.stats.length;
         }
 
-        //separate home and away games
+        // separate home and away games
         playerStats.homeGames = [];
         playerStats.awayGames = [];
         for(i=0; i < gamesPlayed; i++){
@@ -43,7 +46,7 @@
         // console.log("awayGames", playerStats.awayGames);
 
 
-        //separate wins and losses
+        // separate wins and losses
         playerStats.wins = [];
         playerStats.losses = [];
         for(i=0; i < gamesPlayed; i++){
@@ -58,6 +61,7 @@
         // console.log("wins", playerStats.wins);
         // console.log("losses", playerStats.losses);
 
+        // loop through stats and add up totals
         var i;
         for(i=0; i < gamesPlayed; i++){
             totals.mins += playerStats.stats[i].mins;
@@ -83,7 +87,7 @@
             totals.plusminus += playerStats.stats[i].plusMinus;
         };
 
-        //calculate percentages
+        //calculate percentages - set percentage to 0 if no shots were taken
         if(totals.fga == 0){
             totals.fgp = 0;
         }
@@ -117,6 +121,7 @@
 
         //calculate averages
         var averages = {};
+        
         if(gamesPlayed == 0){
             averages = totals;
         }
@@ -151,6 +156,8 @@
 
         //////////////////////// HOME STATS ////////////////////////////
 
+        // home stats handled like the overall stats
+
         //initialize home stats to 0
         var homeTotals = {};
         homeTotals.mins,homeTotals.pts,homeTotals.fgm,homeTotals.fga,homeTotals.twoptm,homeTotals.twopta,homeTotals.threeptm,homeTotals.threepta,homeTotals.ftm,homeTotals.fta,homeTotals.oreb,homeTotals.dreb,homeTotals.reb,homeTotals.ast,homeTotals.to,homeTotals.stl,homeTotals.blk,homeTotals.blkr,homeTotals.pf,homeTotals.flson,homeTotals.plusminus;
@@ -166,6 +173,7 @@
             gamesPlayed = playerStats.stats.length;
         }
 
+        // loop through stats and add up totals from home games
         var i;
         for(i=0; i < gamesPlayed; i++){
             if(playerStats.stats[i].location == "H"){
@@ -194,7 +202,7 @@
            
         };
 
-        //calculate home percentages
+        //calculate home percentages as above with overall stats
         if(homeTotals.fga == 0){
             homeTotals.fgp = 0;
         }
@@ -261,6 +269,8 @@
 
         /////////////////////// AWAY STATS /////////////////////////////
 
+        // handled like home stats
+
         //initialize away stats to 0
         var awayTotals = {};
         awayTotals.mins,awayTotals.pts,awayTotals.fgm,awayTotals.fga,awayTotals.twoptm,awayTotals.twopta,awayTotals.threeptm,awayTotals.threepta,awayTotals.ftm,awayTotals.fta,awayTotals.oreb,awayTotals.dreb,awayTotals.reb,awayTotals.ast,awayTotals.to,awayTotals.stl,awayTotals.blk,awayTotals.blkr,awayTotals.pf,awayTotals.flson,awayTotals.plusminus;
@@ -304,7 +314,7 @@
            
         };
 
-        //calculate away percentages
+        // calculate away percentages
         if(awayTotals.fga == 0){
             awayTotals.fgp = 0;
         }
@@ -335,7 +345,7 @@
         // console.log("awayTotals", playerStats.awayTotals);
         
 
-        //calculate away averages
+        // calculate away averages
         var awayAverages = {};
         if(gamesPlayed == 0){
             awayAverages = awayTotals;
@@ -370,7 +380,9 @@
         // console.log("awayAverages", playerStats.awayAverages);
 
 
-         /////////////////////// STATS IN WINS /////////////////////////////
+        /////////////////////// STATS IN WINS /////////////////////////////
+
+        // win stats handled like stats above
 
         //initialize away stats to 0
         var winTotals = {};
@@ -407,7 +419,7 @@
            
         };
 
-        //calculate away percentages
+        // calculate away percentages
         if(winTotals.fga == 0){
             winTotals.fgp = 0;
         }
@@ -438,7 +450,7 @@
         // console.log("winTotals", playerStats.winTotals);
         
 
-        //calculate win averages
+        // calculate win averages
         var winAverages = {};
         if(gamesPlayed == 0){
             winAverages = winTotals;
@@ -472,9 +484,11 @@
         playerStats.winAverages.push(winAverages);
         // console.log("winAverages", playerStats.winAverages);
 
-         /////////////////////// STATS IN LOSSES /////////////////////////////
+        /////////////////////// STATS IN LOSSES /////////////////////////////
 
-        //initialize away stats to 0
+        // loss stats handled like win stats above
+
+        // initialize away stats to 0
         var lossTotals = {};
         lossTotals.mins,lossTotals.pts,lossTotals.fgm,lossTotals.fga,lossTotals.twoptm,lossTotals.twopta,lossTotals.threeptm,lossTotals.threepta,lossTotals.ftm,lossTotals.fta,lossTotals.oreb,lossTotals.dreb,lossTotals.reb,lossTotals.ast,lossTotals.to,lossTotals.stl,lossTotals.blk,lossTotals.blkr,lossTotals.pf,lossTotals.flson,lossTotals.plusminus;
 
@@ -517,7 +531,7 @@
            
         };
 
-        //calculate away percentages
+        // calculate away percentages
         if(lossTotals.fga == 0){
             lossTotals.fgp = 0;
         }
@@ -548,7 +562,7 @@
         // console.log("lossTotals", playerStats.lossTotals);
         
 
-        //calculate loss averages
+        // calculate loss averages
         var lossAverages = {};
         if(gamesPlayed == 0){
             lossAverages = lossTotals;

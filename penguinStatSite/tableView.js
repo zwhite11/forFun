@@ -1,3 +1,11 @@
+/**
+ * Functions for showing and hiding different tables
+ */
+
+
+ /**
+  * removes the currently selected table
+  */
 function removeCurrent(){
     var currentTable = document.getElementsByClassName("current")[0];
     currentTable.classList.remove("current");
@@ -7,6 +15,9 @@ function removeCurrent(){
     currentLink.classList.remove("currentLink");
 }
 
+/**
+ * show the table for overall stats
+ */
 function showAll(){
     removeCurrent();
     var allTable = document.getElementById("all");
@@ -15,6 +26,9 @@ function showAll(){
     document.getElementById("allLink").classList.add("currentLink");
 }
 
+/**
+ * show the table for stats from home games
+ */
 function showHome(){
     removeCurrent();
     var homeTable = document.getElementById("home");
@@ -23,6 +37,9 @@ function showHome(){
     document.getElementById("homeLink").classList.add("currentLink");
 }
 
+/**
+ * show the table for stats from away games
+ */
 function showAway(){
     removeCurrent();
     var awayTable = document.getElementById("away");
@@ -31,6 +48,9 @@ function showAway(){
     document.getElementById("awayLink").classList.add("currentLink");
 }
 
+/**
+ * show the table for stats from wins
+ */
 function showWins(){
     removeCurrent();
     var winsTable = document.getElementById("wins");
@@ -39,6 +59,9 @@ function showWins(){
     document.getElementById("winsLink").classList.add("currentLink");
 }
 
+/**
+ * show the table for stats from losses
+ */
 function showLosses(){
     removeCurrent();
     var lossesTable = document.getElementById("losses");

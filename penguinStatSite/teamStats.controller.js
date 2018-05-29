@@ -10,7 +10,6 @@
         teamStats.stats = stats;
         teamStats.round = round;
         teamStats.ourStats = ourStats;
-        // console.log("round?", teamStats.round);
         console.log("stats", teamStats.stats);
 
         //pull out specific game based on the round
@@ -28,8 +27,8 @@
             }
         }
 
-        console.log("Ostats", teamStats.opponentStats);
-        console.log("OURstats", teamStats.ourStats);
+        // console.log("Ostats", teamStats.opponentStats);
+        // console.log("OURstats", teamStats.ourStats);
         
 
     }

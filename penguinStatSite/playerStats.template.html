@@ -1,3 +1,4 @@
+<!-- displays and individual player's stats -->
 <h3>{{playerStats.name}}</h3>
     <div id="selectors">
         <!-- add all tables. hide based on clicks -->
@@ -38,8 +39,6 @@
         <th>pf</th>
         <th>flson</th>
         <th>+/-</th>
-
-        <!-- <h3 ng-if=""></h3> -->
 
         <tr ng-repeat="stat in playerStats.stats">
             <td>{{stat.opponent}}</td>

@@ -1,3 +1,7 @@
+/**
+ * team controller for handling team stats
+ */
+
 (function () {
     'use strict';
     
@@ -13,8 +17,8 @@
       console.log("gameList", gameList.games);
       console.log("ourstats", gameList.ourStats);
 
-        //games = opponent stats
-      //ourStats = our stats
+            //games = opponent stats
+            //ourStats = our stats
       
       var gamesPlayed = gameList.games.length;
 
@@ -30,7 +34,9 @@
       gameList.oWins = [];
       gameList.oLosses = [];
 
+
       var i;
+      // loop through games played and add each based on the category for our stats and opponents
       for(i=0; i < gamesPlayed; i++){
         var currGame = gameList.ourStats[i];
 
@@ -74,6 +80,7 @@
     
       console.log("homeGames", gameList.homeGames);
       console.log("ohomeGames", gameList.oHomeGames);
+
       // console.log("away", gameList.awayGames);
       // console.log("wins", gameList.wins);
       // console.log("losses", gameList.losses);
@@ -81,7 +88,7 @@
 
 
 
-      //calculate totals for us and them
+      //calculate totals for us and opponents
 
       //---------their stats-----------
       var oppTotals = {};
@@ -92,6 +99,7 @@
 
       
 
+      // loop through opponent team stats and add up totals
       var i;
       for(i=0; i < gamesPlayed; i++){
         oppTotals.pts += gameList.games[i].pts;
@@ -153,6 +161,8 @@
       gameList.oppAverages = oppAverages;
       // console.log("oppAverages", gameList.oppAverages);
 
+
+
       //--------------------ourstats----------------
 
       var ourTotals = {};
@@ -162,6 +172,7 @@
       ourTotals.pts = ourTotals.fga= ourTotals.twoptm= ourTotals.twopta= ourTotals.threeptm= ourTotals.threepta= ourTotals.ftm= ourTotals.fta= ourTotals.oreb= ourTotals.reb= ourTotals.ast= ourTotals.stl=ourTotals.blk=ourTotals.to=ourTotals.pf=ourTotals.pip=ourTotals.scp=ourTotals.pft=ourTotals.fbp=ourTotals.bp=ourTotals.fgm;
 
 
+      // loop through our stats and add up our totals
       var i;
       for(i=0; i < gamesPlayed; i++){
         ourTotals.pts += gameList.ourStats[i].pts;
@@ -240,10 +251,9 @@
       ourHomeTotals.pts=ourHomeTotals.fga= ourHomeTotals.twoptm= ourHomeTotals.twopta= ourHomeTotals.threeptm= ourHomeTotals.threepta= ourHomeTotals.ftm= ourHomeTotals.fta= ourHomeTotals.oreb= ourHomeTotals.reb= ourHomeTotals.ast= ourHomeTotals.stl=ourHomeTotals.blk=ourHomeTotals.to=ourHomeTotals.pf=ourHomeTotals.pip=ourHomeTotals.scp=ourHomeTotals.pft=ourHomeTotals.fbp=ourHomeTotals.bp=ourHomeTotals.fgm;
 
       
-
+      // adding up opponents home game stat totals
       var i;
       for(i=0; i < gameList.homeGames.length; i++){
-        //opponents
         oppHomeTotals.pts += gameList.oHomeGames[i].pts;
         oppHomeTotals.fgm += gameList.oHomeGames[i].fgm;
         oppHomeTotals.fga += gameList.oHomeGames[i].fga;
@@ -266,7 +276,7 @@
         oppHomeTotals.fbp += gameList.oHomeGames[i].fbp;
         oppHomeTotals.bp += gameList.oHomeGames[i].bp;
 
-        //us
+        // adding up our home game stat totals
         ourHomeTotals.pts += gameList.homeGames[i].pts;
         ourHomeTotals.fgm += gameList.homeGames[i].fgm;
         ourHomeTotals.fga += gameList.homeGames[i].fga;
@@ -289,6 +299,7 @@
         ourHomeTotals.fbp += gameList.homeGames[i].fbp;
         ourHomeTotals.bp += gameList.homeGames[i].bp;
       }
+
       //opponent percentages
       oppHomeTotals.fgp = ((oppHomeTotals.fgm/oppHomeTotals.fga) * 100).toFixed(2);
       oppHomeTotals.twoptp = ((oppHomeTotals.twoptm/oppHomeTotals.twopta) * 100).toFixed(2);
@@ -374,10 +385,9 @@
       ourAwayTotals.pts=ourAwayTotals.fga= ourAwayTotals.twoptm= ourAwayTotals.twopta= ourAwayTotals.threeptm= ourAwayTotals.threepta= ourAwayTotals.ftm= ourAwayTotals.fta= ourAwayTotals.oreb= ourAwayTotals.reb= ourAwayTotals.ast= ourAwayTotals.stl=ourAwayTotals.blk=ourAwayTotals.to=ourAwayTotals.pf=ourAwayTotals.pip=ourAwayTotals.scp=ourAwayTotals.pft=ourAwayTotals.fbp=ourAwayTotals.bp=ourAwayTotals.fgm;
 
       
-
+      // adding up opponents away game totals
       var i;
       for(i=0; i < gameList.awayGames.length; i++){
-        //opponents
         oppAwayTotals.pts += gameList.oAwayGames[i].pts;
         oppAwayTotals.fgm += gameList.oAwayGames[i].fgm;
         oppAwayTotals.fga += gameList.oAwayGames[i].fga;
@@ -400,7 +410,7 @@
         oppAwayTotals.fbp += gameList.oAwayGames[i].fbp;
         oppAwayTotals.bp += gameList.oAwayGames[i].bp;
 
-        //us
+        // adding up our away game totals
         ourAwayTotals.pts += gameList.awayGames[i].pts;
         ourAwayTotals.fgm += gameList.awayGames[i].fgm;
         ourAwayTotals.fga += gameList.awayGames[i].fga;
@@ -423,6 +433,7 @@
         ourAwayTotals.fbp += gameList.awayGames[i].fbp;
         ourAwayTotals.bp += gameList.awayGames[i].bp;
       }
+
       //opponent percentages
       oppAwayTotals.fgp = ((oppAwayTotals.fgm/oppAwayTotals.fga) * 100).toFixed(2);
       oppAwayTotals.twoptp = ((oppAwayTotals.twoptm/oppAwayTotals.twopta) * 100).toFixed(2);
@@ -510,10 +521,9 @@
       ourWinsTotals.pts=ourWinsTotals.fga= ourWinsTotals.twoptm= ourWinsTotals.twopta= ourWinsTotals.threeptm= ourWinsTotals.threepta= ourWinsTotals.ftm= ourWinsTotals.fta= ourWinsTotals.oreb= ourWinsTotals.reb= ourWinsTotals.ast= ourWinsTotals.stl=ourWinsTotals.blk=ourWinsTotals.to=ourWinsTotals.pf=ourWinsTotals.pip=ourWinsTotals.scp=ourWinsTotals.pft=ourWinsTotals.fbp=ourWinsTotals.bp=ourWinsTotals.fgm;
 
       
-
+      // adding up opponent totals during our wins
       var i;
       for(i=0; i < gameList.wins.length; i++){
-        //opponents        
         oppWinsTotals.pts += gameList.oWins[i].pts;
         oppWinsTotals.fgm += gameList.oWins[i].fgm;
         oppWinsTotals.fga += gameList.oWins[i].fga;
@@ -536,7 +546,7 @@
         oppWinsTotals.fbp += gameList.oWins[i].fbp;
         oppWinsTotals.bp += gameList.oWins[i].bp;
 
-        //us
+        // our totals during our wins
         ourWinsTotals.pts += gameList.wins[i].pts;
         ourWinsTotals.fgm += gameList.wins[i].fgm;
         ourWinsTotals.fga += gameList.wins[i].fga;
@@ -559,7 +569,7 @@
         ourWinsTotals.fbp += gameList.wins[i].fbp;
         ourWinsTotals.bp += gameList.wins[i].bp;
       }
-      //opponent percentages
+      // opponent percentages
       oppWinsTotals.fgp = ((oppWinsTotals.fgm/oppWinsTotals.fga) * 100).toFixed(2);
       oppWinsTotals.twoptp = ((oppWinsTotals.twoptm/oppWinsTotals.twopta) * 100).toFixed(2);
       oppWinsTotals.threeptp = ((oppWinsTotals.threeptm/oppWinsTotals.threepta) * 100).toFixed(2);
@@ -567,7 +577,7 @@
 
       gameList.oppWinsTotals = oppWinsTotals;
 
-      //our percentages
+      // our percentages
       ourWinsTotals.fgp = ((ourWinsTotals.fgm/ourWinsTotals.fga) * 100).toFixed(2);
       ourWinsTotals.twoptp = ((ourWinsTotals.twoptm/ourWinsTotals.twopta) * 100).toFixed(2);
       ourWinsTotals.threeptp = ((ourWinsTotals.threeptm/ourWinsTotals.threepta) * 100).toFixed(2);
@@ -575,7 +585,7 @@
 
       gameList.ourWinsTotals = ourWinsTotals;
 
-      //calculate opponent away averages
+      // calculate opponent averages during our wins
       var oppWinsAverages = {};
       oppWinsAverages.pts = ( oppWinsTotals.pts/gameList.wins.length).toFixed(2);
       oppWinsAverages.fgm = ( oppWinsTotals.fgm/gameList.wins.length).toFixed(2);
@@ -601,7 +611,7 @@
 
       gameList.oppWinsAverages = oppWinsAverages;
 
-      //calculate our away averages
+      //calculate our averages during wins
       var ourWinsAverages = {};
       ourWinsAverages.pts = ( ourWinsTotals.pts/gameList.wins.length).toFixed(2);
       ourWinsAverages.fgm = ( ourWinsTotals.fgm/gameList.wins.length).toFixed(2);
@@ -645,10 +655,9 @@
       ourLossTotals.pts=ourLossTotals.fga= ourLossTotals.twoptm= ourLossTotals.twopta= ourLossTotals.threeptm= ourLossTotals.threepta= ourLossTotals.ftm= ourLossTotals.fta= ourLossTotals.oreb= ourLossTotals.reb= ourLossTotals.ast= ourLossTotals.stl=ourLossTotals.blk=ourLossTotals.to=ourLossTotals.pf=ourLossTotals.pip=ourLossTotals.scp=ourLossTotals.pft=ourLossTotals.fbp=ourLossTotals.bp=ourLossTotals.fgm;
 
       
-
+      // opponents totals during our losses
       var i;
       for(i=0; i < gameList.losses.length; i++){
-        //opponents        
         oppLossTotals.pts += gameList.oLosses[i].pts;
         oppLossTotals.fgm += gameList.oLosses[i].fgm;
         oppLossTotals.fga += gameList.oLosses[i].fga;
@@ -671,7 +680,7 @@
         oppLossTotals.fbp += gameList.oLosses[i].fbp;
         oppLossTotals.bp += gameList.oLosses[i].bp;
 
-        //us
+        // our totals during our losses
         ourLossTotals.pts += gameList.losses[i].pts;
         ourLossTotals.fgm += gameList.losses[i].fgm;
         ourLossTotals.fga += gameList.losses[i].fga;
@@ -710,7 +719,7 @@
 
       gameList.ourLossTotals = ourLossTotals;
 
-      //calculate opponent away averages
+      //calculate opponent averages during losses
       var oppLossAverages = {};
       oppLossAverages.pts = ( oppLossTotals.pts/gameList.losses.length).toFixed(2);
       oppLossAverages.fgm = ( oppLossTotals.fgm/gameList.losses.length).toFixed(2);
@@ -736,7 +745,7 @@
 
       gameList.oppLossAverages = oppLossAverages;
 
-      //calculate our away averages
+      //calculate our averages averages during losses
       var ourLossAverages = {};
       ourLossAverages.pts = ( ourLossTotals.pts/gameList.losses.length).toFixed(2);
       ourLossAverages.fgm = ( ourLossTotals.fgm/gameList.losses.length).toFixed(2);

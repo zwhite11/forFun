@@ -4,6 +4,9 @@
     angular.module('Data')
     .service('PlayerDataService', PlayerDataService)
 
+    /**
+     * use http service to retrieve player data
+     */
     PlayerDataService.$inject = ['$http'];
     function PlayerDataService($http){
         var service = this;
@@ -18,6 +21,7 @@
             return response;
         };
 
+        //all players, men and women, in the same folder
         service.getStatsForPlayer = function(shortName){
             var response = $http({
                 method: "GET",
@@ -29,7 +33,6 @@
 
 
         //women's data
-
         service.getAllWPlayers = function(){
             var response = $http({
                 method: "GET",

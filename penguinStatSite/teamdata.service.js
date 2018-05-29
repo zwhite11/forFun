@@ -4,6 +4,7 @@
     angular.module('Data')
     .service('TeamDataService', TeamDataService)
 
+    // inject http service to retrieve team stat files
     TeamDataService.$inject = ['$http'];
     function TeamDataService($http){
         var service = this;

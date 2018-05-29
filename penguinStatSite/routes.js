@@ -16,6 +16,7 @@
         templateUrl: 'home.template.html'
       })    
     
+      // list of men's players
       .state('players', {
         url: '/players',
         templateUrl: 'players.template.html',
@@ -29,6 +30,7 @@
         }
       })
     
+      // individual player's stats
       .state('players.playerStats', {
         url: '/playerStats/{shortName}',
         templateUrl: 'playerStats.template.html',
@@ -47,7 +49,7 @@
         }
       })
      
-      
+      // list of games played
       .state('team', {
         url: '/team',
         templateUrl: 'team.template.html',
@@ -66,6 +68,7 @@
         }
       })
       
+      // team stats from a specific game
       .state('team.teamStats', {
         url: '/teamStats/{round}',
         templateUrl: 'teamStats.template.html',
@@ -90,6 +93,7 @@
 
       // womens data
       
+      // list of women's players  
       .state('wPlayers', {
         url: '/wPlayers',
         templateUrl: 'wPlayers.template.html',
@@ -103,6 +107,7 @@
         }
       })
     
+      // individual women's stats
       .state('wPlayers.wPlayerStats', {
         url: '/playerStats/{shortName}',
         templateUrl: 'wPlayerStats.template.html',
@@ -122,6 +127,7 @@
         }
       })
       
+      // list of women's games
       .state('wTeam', {
         url: '/wTeam',
         templateUrl: 'wTeam.template.html',
@@ -140,6 +146,7 @@
         }
       })
       
+      // individual game stats
       .state('wTeam.teamStats', {
         url: '/teamStats/{round}',
         templateUrl: 'teamStats.template.html',
