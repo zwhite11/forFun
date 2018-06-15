@@ -556,6 +556,37 @@
         "pft": 17,
         "fbp": 7,
         "bp": 6
+    },
+    {
+        "round": 19,
+        "opponent": "Somerset",
+        "location": "A",
+        "result": "W",
+        "pts": 62,
+        "fgm": 26,
+        "fga": 70,
+        "fgp": 37,
+        "twoptm": 22,
+        "twopta": 48,
+        "twoptp": 45,
+        "threeptm": 4,
+        "threepta": 22,
+        "threeptp": 18,
+        "ftm": 6,
+        "fta": 7,
+        "ftp": 85,
+        "oreb": 18,
+        "reb": 50,
+        "ast": 15,
+        "stl": 9,
+        "blk": 2,
+        "to": 20,
+        "pf": 14,
+        "pip": 38,
+        "scp": 9,
+        "pft": 20,
+        "fbp": 16,
+        "bp": 2
     }
     
 ]
