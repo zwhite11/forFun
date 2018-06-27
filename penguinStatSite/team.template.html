@@ -1,20 +1,5 @@
 <!-- template for team stats -->
 
-<!-- list of games -->
-<div class="row">
-    <div class="col-lg-12">
-        <h2>Game Stats</h2>
-        <ul class="gameList">
-            <li ng-repeat="game in gameList.games" ui-sref="team.teamStats({round: game.round})" class="link">
-              Round {{game.round}}, {{ game.opponent }} 
-            </li>
-        </ul>
-        
-    </div>
-    
-    <ui-view class="col-lg-10"></ui-view>  
-</div>
-
 
 <div class="row">
   <div class="col-lg-12 bottomTable">
@@ -877,6 +862,31 @@
       </p>
     </div>
   </div>
+
+<!-- add the selection by team here -->
+<div class="row">
+  <div class="col-lg-12">
+    <h2>Stats by Opponent</h2>
+
+  </div>
+</div>
+
+
+<!-- list of games -->
+<div class="row">
+  <div class="col-lg-12">
+      <h2>Individual Game Stats</h2>
+      <ul class="gameList">
+          <li ng-repeat="game in gameList.games" ui-sref="team.teamStats({round: game.round})" class="link">
+            Round {{game.round}}, {{ game.opponent }} 
+          </li>
+      </ul>
+      
+  </div>
+  
+  <ui-view class="col-lg-10"></ui-view>  
+</div>
+
 
 
 

@@ -771,6 +771,19 @@
 
       gameList.ourLossAverages = ourLossAverages;
 
+      console.log("ourlossave", ourLossAverages);
+
+
+      // data against a specific opponent
+
+      
+
+      var oppList = {
+
+      };
+
+
+
     }
     
 })();
