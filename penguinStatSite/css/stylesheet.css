@@ -52,6 +52,11 @@ h2{
     grid-template-columns: 20% 20% 20% 20% 20%;   
     width: 85%; 
 }
+#teamSelectors{
+    display: grid;
+    grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;   
+    width: 85%; 
+}
 
 .filter{
     color: blue;
@@ -89,6 +94,10 @@ h2{
      background-color: blue;
  }
  
+ .bottomBorder { 
+    border-bottom: 1px dashed black; 
+}
+
 
 
 @media screen and (min-width:568px) {

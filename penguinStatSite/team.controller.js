@@ -778,11 +778,102 @@
 
       
 
-      var oppList = {
+      var oppList = ["Smithton", "Wynyard", "Somerset", "Burnie", "Ulverstone", "Devonport", "Latrobe"];
+       
+      gameList.oppList = oppList;
 
+      // an object holding game separated data for US
+      gameList.gameSeparatedUs = {
+        "Smithton" : [],
+        "Wynyard" : [],
+        "Somerset" : [],
+        "Burnie" : [],
+        "Ulverstone" : [],
+        "Devonport" : [],
+        "Latrobe" : []
       };
 
+      // an object holding game separated data for THEM
+      gameList.gameSeparatedThem = {
+        "Smithton" : [],
+        "Wynyard" : [],
+        "Somerset" : [],
+        "Burnie" : [],
+        "Ulverstone" : [],
+        "Devonport" : [],
+        "Latrobe" : []
+      };
 
+      // separating our stats against specific opponents and adding them to the gameSeparated object
+      gameList.ourStats.forEach(function(game){
+        if(game.opponent == "Smithton"){
+          gameList.gameSeparatedUs.Smithton.push(game);
+        }
+        if(game.opponent == "Wynyard"){
+          gameList.gameSeparatedUs.Wynyard.push(game);
+        }
+        if(game.opponent == "Somerset"){
+          gameList.gameSeparatedUs.Somerset.push(game);
+        }
+        if(game.opponent == "Burnie"){
+          gameList.gameSeparatedUs.Burnie.push(game);
+        }
+        if(game.opponent == "Ulverstone"){
+          gameList.gameSeparatedUs.Ulverstone.push(game);
+        }
+        if(game.opponent == "Devonport"){
+          gameList.gameSeparatedUs.Devonport.push(game);
+        }
+        if(game.opponent == "Latrobe"){
+          gameList.gameSeparatedUs.Latrobe.push(game);
+        }
+      });
+
+      // separating OPPONENT stats against specific opponents and adding them to the gameSeparated object
+      gameList.games.forEach(function(game){
+        if(game.opponent == "Smithton"){
+          gameList.gameSeparatedThem.Smithton.push(game);
+        }
+        if(game.opponent == "Wynyard"){
+          gameList.gameSeparatedThem.Wynyard.push(game);
+        }
+        if(game.opponent == "Somerset"){
+          gameList.gameSeparatedThem.Somerset.push(game);
+        }
+        if(game.opponent == "Burnie"){
+          gameList.gameSeparatedThem.Burnie.push(game);
+        }
+        if(game.opponent == "Ulverstone"){
+          gameList.gameSeparatedThem.Ulverstone.push(game);
+        }
+        if(game.opponent == "Devonport"){
+          gameList.gameSeparatedThem.Devonport.push(game);
+        }
+        if(game.opponent == "Latrobe"){
+          gameList.gameSeparatedThem.Latrobe.push(game);
+        }
+      });
+
+      gameList.combinedBurnie = gameList.gameSeparatedThem.Burnie.concat(gameList.gameSeparatedUs.Burnie);
+      console.log("combinedBurnie", gameList.combinedBurnie);
+
+      gameList.combinedBurnie.sort();
+
+
+      var burnieStats = gameList.gameSeparatedUs.Burnie;
+      var burnieTotals = {};
+
+      ourLossTotals.pts,ourLossTotals.fga, ourLossTotals.twoptm, ourLossTotals.twopta, ourLossTotals.threeptm, ourLossTotals.threepta, ourLossTotals.ftm, ourLossTotals.fta, ourLossTotals.oreb, ourLossTotals.reb, ourLossTotals.ast, ourLossTotals.stl,ourLossTotals.blk,ourLossTotals.to,ourLossTotals.pf,ourLossTotals.pip,ourLossTotals.scp,ourLossTotals.pft,ourLossTotals.fbp,ourLossTotals.bp;
+      
+      ourLossTotals.fgm = 0;
+      ourLossTotals.pts=ourLossTotals.fga= ourLossTotals.twoptm= ourLossTotals.twopta= ourLossTotals.threeptm= ourLossTotals.threepta= ourLossTotals.ftm= ourLossTotals.fta= ourLossTotals.oreb= ourLossTotals.reb= ourLossTotals.ast= ourLossTotals.stl=ourLossTotals.blk=ourLossTotals.to=ourLossTotals.pf=ourLossTotals.pip=ourLossTotals.scp=ourLossTotals.pft=ourLossTotals.fbp=ourLossTotals.bp=ourLossTotals.fgm;
+
+      
+      console.log("separated", gameList.gameSeparatedUs);
+      console.log("separated them", gameList.gameSeparatedThem);
+
+
+      
 
     }
     
