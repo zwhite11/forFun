@@ -1,20 +1,4 @@
-<!-- list of games -->
-<div class="row">
-    <div class="col-lg-12">
-        <h2>Game Stats</h2>
-        <ul class="gameList">
-            <li ng-repeat="game in gameList.games" ui-sref="team.teamStats({round: game.round})" class="link">
-              Round {{game.round}}, {{ game.opponent }} 
-            </li>
-        </ul>
-
-    </div>
-    
-    <ui-view class="col-lg-10"></ui-view>  
-
-</div>
-
-
+<!-- template for team stats -->
 <div class="row">
   <div class="col-lg-12 bottomTable">
     <h2>Season Stats</h2>
@@ -530,6 +514,7 @@
           </table>
       
     </div>
+
     <div id="wins">
         <h3>Totals</h3>
         <table>
@@ -866,17 +851,36 @@
       
     </div>
 
-
+    <br>
+    <p> 
+        pip = Point in the Paint <br>
+        scp = Second Chance Points <br>
+        pft = Points From Turnovers <br>
+        fbp = Fast Break Points <br>
+        bp = Bench Points <br>
+      </p>
     </div>
-  <br>
-  <p> 
-    pip = Point in the Paint <br>
-    scp = Second Chance Points <br>
-    pft = Points From Turnovers <br>
-    fbp = Fast Break Points <br>
-    bp = Bench Points <br>
-  </p>  
+  </div>
+
+
+
+<!-- list of games -->
+<div class="row">
+  <div class="col-lg-12">
+      <h2>Individual Game Stats</h2>
+      <ul class="gameList">
+          <li ng-repeat="game in gameList.games" ui-sref="team.teamStats({round: game.round})" class="link">
+            Round {{game.round}}, {{ game.opponent }} 
+          </li>
+      </ul>
+      
+  </div>
+  
+  <ui-view class="col-lg-10"></ui-view>  
 </div>
+
+
+
 
 
 

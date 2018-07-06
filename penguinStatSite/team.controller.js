@@ -83,7 +83,7 @@
 
       // console.log("away", gameList.awayGames);
       // console.log("wins", gameList.wins);
-      // console.log("losses", gameList.losses);
+      console.log("losses", gameList.losses);
 
 
 
@@ -132,7 +132,7 @@
       // console.log("fgp", oppTotals.fgp);
 
       gameList.oppTotals = oppTotals;
-      // console.log("oppTotals", gameList.oppTotals);
+      console.log("oppTotals", gameList.oppTotals);
 
       //calculate averages
       var oppAverages = {};
@@ -655,9 +655,15 @@
       ourLossTotals.pts=ourLossTotals.fga= ourLossTotals.twoptm= ourLossTotals.twopta= ourLossTotals.threeptm= ourLossTotals.threepta= ourLossTotals.ftm= ourLossTotals.fta= ourLossTotals.oreb= ourLossTotals.reb= ourLossTotals.ast= ourLossTotals.stl=ourLossTotals.blk=ourLossTotals.to=ourLossTotals.pf=ourLossTotals.pip=ourLossTotals.scp=ourLossTotals.pft=ourLossTotals.fbp=ourLossTotals.bp=ourLossTotals.fgm;
 
       
+      console.log("TESTTTTT", gameList.oLosses);
+      console.log("TESTTTTT POINTS", gameList.oLosses[0].pts);
+
+      console.log("losses length", gameList.losses);
+
       // opponents totals during our losses
       var i;
       for(i=0; i < gameList.losses.length; i++){
+        console.log("count", i);
         oppLossTotals.pts += gameList.oLosses[i].pts;
         oppLossTotals.fgm += gameList.oLosses[i].fgm;
         oppLossTotals.fga += gameList.oLosses[i].fga;
@@ -703,6 +709,10 @@
         ourLossTotals.fbp += gameList.losses[i].fbp;
         ourLossTotals.bp += gameList.losses[i].bp;
       }
+
+      
+
+
       //opponent percentages
       oppLossTotals.fgp = ((oppLossTotals.fgm/oppLossTotals.fga) * 100).toFixed(2);
       oppLossTotals.twoptp = ((oppLossTotals.twoptm/oppLossTotals.twopta) * 100).toFixed(2);
@@ -771,7 +781,8 @@
 
       gameList.ourLossAverages = ourLossAverages;
 
-      console.log("ourlossave", ourLossAverages);
+      console.log("our loss totals", gameList.ourLossTotals);
+      console.log("ourlossave", gameList.ourLossAverages);
 
 
       // data against a specific opponent
@@ -863,10 +874,10 @@
       var burnieStats = gameList.gameSeparatedUs.Burnie;
       var burnieTotals = {};
 
-      ourLossTotals.pts,ourLossTotals.fga, ourLossTotals.twoptm, ourLossTotals.twopta, ourLossTotals.threeptm, ourLossTotals.threepta, ourLossTotals.ftm, ourLossTotals.fta, ourLossTotals.oreb, ourLossTotals.reb, ourLossTotals.ast, ourLossTotals.stl,ourLossTotals.blk,ourLossTotals.to,ourLossTotals.pf,ourLossTotals.pip,ourLossTotals.scp,ourLossTotals.pft,ourLossTotals.fbp,ourLossTotals.bp;
+      // ourLossTotals.pts,ourLossTotals.fga, ourLossTotals.twoptm, ourLossTotals.twopta, ourLossTotals.threeptm, ourLossTotals.threepta, ourLossTotals.ftm, ourLossTotals.fta, ourLossTotals.oreb, ourLossTotals.reb, ourLossTotals.ast, ourLossTotals.stl,ourLossTotals.blk,ourLossTotals.to,ourLossTotals.pf,ourLossTotals.pip,ourLossTotals.scp,ourLossTotals.pft,ourLossTotals.fbp,ourLossTotals.bp;
       
-      ourLossTotals.fgm = 0;
-      ourLossTotals.pts=ourLossTotals.fga= ourLossTotals.twoptm= ourLossTotals.twopta= ourLossTotals.threeptm= ourLossTotals.threepta= ourLossTotals.ftm= ourLossTotals.fta= ourLossTotals.oreb= ourLossTotals.reb= ourLossTotals.ast= ourLossTotals.stl=ourLossTotals.blk=ourLossTotals.to=ourLossTotals.pf=ourLossTotals.pip=ourLossTotals.scp=ourLossTotals.pft=ourLossTotals.fbp=ourLossTotals.bp=ourLossTotals.fgm;
+      // ourLossTotals.fgm = 0;
+      // ourLossTotals.pts=ourLossTotals.fga= ourLossTotals.twoptm= ourLossTotals.twopta= ourLossTotals.threeptm= ourLossTotals.threepta= ourLossTotals.ftm= ourLossTotals.fta= ourLossTotals.oreb= ourLossTotals.reb= ourLossTotals.ast= ourLossTotals.stl=ourLossTotals.blk=ourLossTotals.to=ourLossTotals.pf=ourLossTotals.pip=ourLossTotals.scp=ourLossTotals.pft=ourLossTotals.fbp=ourLossTotals.bp=ourLossTotals.fgm;
 
       
       console.log("separated", gameList.gameSeparatedUs);
