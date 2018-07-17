@@ -76,6 +76,7 @@ h2{
     columns:100px 3;
 }
 
+/* hide tables unless they're clicked */
 #home{
     display: none; 
 }
@@ -88,8 +89,29 @@ h2{
 #losses{
     display: none;
 }
+#wynyard{
+    display: none;
+}
+#latrobe{
+    display: none;
+}
+#smithton{
+    display: none;
+}
+#ulverstone{
+    display: none;
+}
+#somerset{
+    display: none;
+}
+#devonport{
+    display: none;
+}
+#ulverstone{
+    display: none;
+}
 
-.currentLink{
+.currentLink, .currentOppLink{
      color: white;
      background-color: blue;
  }
@@ -98,6 +120,15 @@ h2{
     border-bottom: 1px dashed black; 
 }
 
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
 
 
 @media screen and (min-width:568px) {

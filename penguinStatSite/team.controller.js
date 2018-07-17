@@ -78,12 +78,12 @@
         }
       }
     
-      console.log("homeGames", gameList.homeGames);
-      console.log("ohomeGames", gameList.oHomeGames);
+      // console.log("homeGames", gameList.homeGames);
+      // console.log("ohomeGames", gameList.oHomeGames);
 
       // console.log("away", gameList.awayGames);
       // console.log("wins", gameList.wins);
-      console.log("losses", gameList.losses);
+      // console.log("losses", gameList.losses);
 
 
 
@@ -132,7 +132,7 @@
       // console.log("fgp", oppTotals.fgp);
 
       gameList.oppTotals = oppTotals;
-      console.log("oppTotals", gameList.oppTotals);
+      // console.log("oppTotals", gameList.oppTotals);
 
       //calculate averages
       var oppAverages = {};
@@ -654,16 +654,9 @@
       ourLossTotals.fgm = 0;
       ourLossTotals.pts=ourLossTotals.fga= ourLossTotals.twoptm= ourLossTotals.twopta= ourLossTotals.threeptm= ourLossTotals.threepta= ourLossTotals.ftm= ourLossTotals.fta= ourLossTotals.oreb= ourLossTotals.reb= ourLossTotals.ast= ourLossTotals.stl=ourLossTotals.blk=ourLossTotals.to=ourLossTotals.pf=ourLossTotals.pip=ourLossTotals.scp=ourLossTotals.pft=ourLossTotals.fbp=ourLossTotals.bp=ourLossTotals.fgm;
 
-      
-      console.log("TESTTTTT", gameList.oLosses);
-      console.log("TESTTTTT POINTS", gameList.oLosses[0].pts);
-
-      console.log("losses length", gameList.losses);
-
       // opponents totals during our losses
       var i;
       for(i=0; i < gameList.losses.length; i++){
-        console.log("count", i);
         oppLossTotals.pts += gameList.oLosses[i].pts;
         oppLossTotals.fgm += gameList.oLosses[i].fgm;
         oppLossTotals.fga += gameList.oLosses[i].fga;
@@ -709,9 +702,6 @@
         ourLossTotals.fbp += gameList.losses[i].fbp;
         ourLossTotals.bp += gameList.losses[i].bp;
       }
-
-      
-
 
       //opponent percentages
       oppLossTotals.fgp = ((oppLossTotals.fgm/oppLossTotals.fga) * 100).toFixed(2);
@@ -865,14 +855,7 @@
         }
       });
 
-      gameList.combinedBurnie = gameList.gameSeparatedThem.Burnie.concat(gameList.gameSeparatedUs.Burnie);
-      console.log("combinedBurnie", gameList.combinedBurnie);
-
-      gameList.combinedBurnie.sort();
-
-
-      var burnieStats = gameList.gameSeparatedUs.Burnie;
-      var burnieTotals = {};
+      
 
       // ourLossTotals.pts,ourLossTotals.fga, ourLossTotals.twoptm, ourLossTotals.twopta, ourLossTotals.threeptm, ourLossTotals.threepta, ourLossTotals.ftm, ourLossTotals.fta, ourLossTotals.oreb, ourLossTotals.reb, ourLossTotals.ast, ourLossTotals.stl,ourLossTotals.blk,ourLossTotals.to,ourLossTotals.pf,ourLossTotals.pip,ourLossTotals.scp,ourLossTotals.pft,ourLossTotals.fbp,ourLossTotals.bp;
       
@@ -880,10 +863,206 @@
       // ourLossTotals.pts=ourLossTotals.fga= ourLossTotals.twoptm= ourLossTotals.twopta= ourLossTotals.threeptm= ourLossTotals.threepta= ourLossTotals.ftm= ourLossTotals.fta= ourLossTotals.oreb= ourLossTotals.reb= ourLossTotals.ast= ourLossTotals.stl=ourLossTotals.blk=ourLossTotals.to=ourLossTotals.pf=ourLossTotals.pip=ourLossTotals.scp=ourLossTotals.pft=ourLossTotals.fbp=ourLossTotals.bp=ourLossTotals.fgm;
 
       
+      // console.log("separated", gameList.gameSeparatedUs);
+      // console.log("separated them", gameList.gameSeparatedThem);
+
+      // console.log("burnie", gameList.gameSeparatedUs.Burnie);
+
+            
+      // var burnieUs = gameList.gameSeparatedUs.Burnie;
+      // var burnieTotalsUs = {};
+
+      //add an object holding OUR totals and averages for a specific opponent 
+      for(var opponent in gameList.gameSeparatedUs){
+        var ourStats = gameList.gameSeparatedUs[opponent];
+        var ourTotals = {};
+        // console.log("ourStats", ourStats);
+
+        ourTotals.pts = 0;
+        ourTotals.fgm = 0;
+        ourTotals.fga = 0;
+        ourTotals.twoptm = 0;
+        ourTotals.twopta = 0;
+        ourTotals.threeptm = 0;
+        ourTotals.threepta = 0;
+        ourTotals.ftm = 0;
+        ourTotals.fta = 0;
+        ourTotals.oreb = 0;
+        ourTotals.reb = 0;
+        ourTotals.ast = 0;
+        ourTotals.stl = 0;
+        ourTotals.blk = 0;
+        ourTotals.to = 0;
+        ourTotals.pf = 0;
+        ourTotals.pip = 0;
+        ourTotals.scp = 0;
+        ourTotals.pft = 0;
+        ourTotals.fbp = 0;
+        ourTotals.bp = 0;
+
+        //add up total stats from each game against specific opponent
+        ourStats.forEach(function(game){
+          // console.log("foreachgame", game);
+          ourTotals.pts += game.pts;
+          ourTotals.fgm += game.fgm;
+          ourTotals.fga += game.fga;
+          ourTotals.twoptm += game.twoptm;
+          ourTotals.twopta += game.twopta;
+          ourTotals.threeptm += game.threeptm;
+          ourTotals.threepta += game.threepta;
+          ourTotals.ftm += game.ftm;
+          ourTotals.fta += game.fta;
+          ourTotals.oreb += game.oreb;
+          ourTotals.reb += game.reb;
+          ourTotals.ast += game.ast;
+          ourTotals.stl += game.stl;
+          ourTotals.blk += game.blk;
+          ourTotals.to += game.to;
+          ourTotals.pf += game.pf;
+          ourTotals.pip += game.pip;
+          ourTotals.scp += game.scp;
+          ourTotals.pft += game.pft;
+          ourTotals.fbp += game.fbp;
+          ourTotals.bp += game.bp;
+        });
+
+        //calculate averages
+        var ourAverages = {}
+        ourAverages.pts = (ourTotals.pts / 3).toFixed(2);
+        ourAverages.fgm = (ourTotals.fgm / 3).toFixed(2);
+        ourAverages.fga = (ourTotals.fga / 3).toFixed(2);
+        ourAverages.twoptm = (ourTotals.twoptm / 3).toFixed(2);
+        ourAverages.twopta = (ourTotals.twopta / 3).toFixed(2);
+        ourAverages.threeptm = (ourTotals.threeptm / 3).toFixed(2);
+        ourAverages.threepta = (ourTotals.threepta / 3).toFixed(2);
+        ourAverages.ftm = (ourTotals.ftm / 3).toFixed(2);
+        ourAverages.fta = (ourTotals.fta / 3).toFixed(2);
+        ourAverages.oreb = (ourTotals.oreb / 3).toFixed(2);
+        ourAverages.reb = (ourTotals.reb / 3).toFixed(2);
+        ourAverages.ast = (ourTotals.ast / 3).toFixed(2);
+        ourAverages.stl = (ourTotals.stl / 3).toFixed(2);
+        ourAverages.blk = (ourTotals.blk / 3).toFixed(2);
+        ourAverages.to = (ourTotals.to / 3).toFixed(2);
+        ourAverages.pf = (ourTotals.pf / 3).toFixed(2);
+        ourAverages.pip = (ourTotals.pip / 3).toFixed(2);
+        ourAverages.scp = (ourTotals.scp / 3).toFixed(2);
+        ourAverages.pft = (ourTotals.pft / 3).toFixed(2);
+        ourAverages.fbp = (ourTotals.fbp / 3).toFixed(2);
+        ourAverages.bp = (ourTotals.bp / 3).toFixed(2);
+
+        //calculate percentages
+        ourTotals.fgp = ((ourTotals.fgm/ourTotals.fga) * 100).toFixed(2);
+        ourTotals.twoptp = ((ourTotals.twoptm/ourTotals.twopta) * 100).toFixed(2);
+        ourTotals.threeptp = ((ourTotals.threeptm/ourTotals.threepta) * 100).toFixed(2);
+        ourTotals.ftp = ((ourTotals.ftm/ourTotals.fta) * 100).toFixed(2);
+        
+        //push new object to specific opponent object
+        gameList.gameSeparatedUs[opponent].push(ourTotals);
+        gameList.gameSeparatedUs[opponent].push(ourAverages);
+        console.log("us", gameList.gameSeparatedUs[opponent]);
+
+      }
+
+      //add an object holding OPPONENT totals and averages for a specific opponent 
+      for(var opponent in gameList.gameSeparatedThem){
+        var oppStats = gameList.gameSeparatedThem[opponent];
+        var oppTotals = {};
+        // console.log("ourStats", ourStats);
+
+        oppTotals.pts = 0;
+        oppTotals.fgm = 0;
+        oppTotals.fga = 0;
+        oppTotals.fgp = 0;
+        oppTotals.twoptm = 0;
+        oppTotals.twopta = 0;
+        oppTotals.twoptp = 0;
+        oppTotals.threeptm = 0;
+        oppTotals.threepta = 0;
+        oppTotals.threeptp = 0;
+        oppTotals.ftm = 0;
+        oppTotals.fta = 0;
+        oppTotals.ftp = 0;
+        oppTotals.oreb = 0;
+        oppTotals.reb = 0;
+        oppTotals.ast = 0;
+        oppTotals.stl = 0;
+        oppTotals.blk = 0;
+        oppTotals.to = 0;
+        oppTotals.pf = 0;
+        oppTotals.pip = 0;
+        oppTotals.scp = 0;
+        oppTotals.pft = 0;
+        oppTotals.fbp = 0;
+        oppTotals.bp = 0;
+
+        //add up total stats from each game against specific opponent
+        oppStats.forEach(function(game){
+          // console.log("foreachgame", game);
+          oppTotals.pts += game.pts;
+          oppTotals.fgm += game.fgm;
+          oppTotals.fga += game.fga;
+          oppTotals.twoptm += game.twoptm;
+          oppTotals.twopta += game.twopta;
+          oppTotals.threeptm += game.threeptm;
+          oppTotals.threepta += game.threepta;
+          oppTotals.ftm += game.ftm;
+          oppTotals.fta += game.fta;
+          oppTotals.oreb += game.oreb;
+          oppTotals.reb += game.reb;
+          oppTotals.ast += game.ast;
+          oppTotals.stl += game.stl;
+          oppTotals.blk += game.blk;
+          oppTotals.to += game.to;
+          oppTotals.pf += game.pf;
+          oppTotals.pip += game.pip;
+          oppTotals.scp += game.scp;
+          oppTotals.pft += game.pft;
+          oppTotals.fbp += game.fbp;
+          oppTotals.bp += game.bp;
+        });
+
+        //calculate averages
+        var oppAverages = {}
+        oppAverages.pts = (oppTotals.pts / 3).toFixed(2);
+        oppAverages.fgm = (oppTotals.fgm / 3).toFixed(2);
+        oppAverages.fga = (oppTotals.fga / 3).toFixed(2);
+        oppAverages.twoptm = (oppTotals.twoptm / 3).toFixed(2);
+        oppAverages.twopta = (oppTotals.twopta / 3).toFixed(2);
+        oppAverages.threeptm = (oppTotals.threeptm / 3).toFixed(2);
+        oppAverages.threepta = (oppTotals.threepta / 3).toFixed(2);
+        oppAverages.ftm = (oppTotals.ftm / 3).toFixed(2);
+        oppAverages.fta = (oppTotals.fta / 3).toFixed(2);
+        oppAverages.oreb = (oppTotals.oreb / 3).toFixed(2);
+        oppAverages.reb = (oppTotals.reb / 3).toFixed(2);
+        oppAverages.ast = (oppTotals.ast / 3).toFixed(2);
+        oppAverages.stl = (oppTotals.stl / 3).toFixed(2);
+        oppAverages.blk = (oppTotals.blk / 3).toFixed(2);
+        oppAverages.to = (oppTotals.to / 3).toFixed(2);
+        oppAverages.pf = (oppTotals.pf / 3).toFixed(2);
+        oppAverages.pip = (oppTotals.pip / 3).toFixed(2);
+        oppAverages.scp = (oppTotals.scp / 3).toFixed(2);
+        oppAverages.pft = (oppTotals.pft / 3).toFixed(2);
+        oppAverages.fbp = (oppTotals.fbp / 3).toFixed(2);
+        oppAverages.bp = (oppTotals.bp / 3).toFixed(2);
+
+
+        //calculate percentages
+        oppTotals.fgp = ((oppTotals.fgm/oppTotals.fga) * 100).toFixed(2);
+        oppTotals.twoptp = ((oppTotals.twoptm/oppTotals.twopta) * 100).toFixed(2);
+        oppTotals.threeptp = ((oppTotals.threeptm/oppTotals.threepta) * 100).toFixed(2);
+        oppTotals.ftp = ((oppTotals.ftm/oppTotals.fta) * 100).toFixed(2);
+        
+        //add new object to specific opponent object
+        gameList.gameSeparatedThem[opponent].push(oppTotals);
+        gameList.gameSeparatedThem[opponent].push(oppAverages);
+        console.log("them", gameList.gameSeparatedThem[opponent]);
+
+      }
+        
+
+      
       console.log("separated", gameList.gameSeparatedUs);
       console.log("separated them", gameList.gameSeparatedThem);
-
-
       
 
     }

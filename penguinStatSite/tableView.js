@@ -69,3 +69,95 @@ function showLosses(){
     lossesTable.classList.add("current");
     document.getElementById("lossesLink").classList.add("currentLink");
 }
+
+
+
+/**
+  * removes the currently selected team table
+  */
+ function removeCurrentOppTable(){
+    var currentTable = document.getElementsByClassName("currentOpp")[0];
+    currentTable.classList.remove("currentOpp");
+    currentTable.style.display = "none";
+
+    var currentLink = document.getElementsByClassName("currentOppLink")[0];
+    currentLink.classList.remove("currentOppLink");
+}
+
+
+/**
+ * show the table for Burnie
+ */
+function showBurnie(){
+    removeCurrentOppTable();
+    var burnieTable = document.getElementById("burnie");
+    burnieTable.style.display = "block";
+    burnieTable.classList.add("currentOpp");
+    document.getElementById("burnieLink").classList.add("currentOppLink");
+}
+
+/**
+ * show the table for Wynyard
+ */
+function showWynyard(){
+    removeCurrentOppTable();
+    var wynyardTable = document.getElementById("wynyard");
+    wynyardTable.style.display = "block";
+    wynyardTable.classList.add("currentOpp");
+    document.getElementById("wynyardLink").classList.add("currentOppLink");
+}
+
+/**
+ * show the table for Latrobe
+ */
+function showLatrobe(){
+    removeCurrentOppTable();
+    var latrobeTable = document.getElementById("latrobe");
+    latrobeTable.style.display = "block";
+    latrobeTable.classList.add("currentOpp");
+    document.getElementById("latrobeLink").classList.add("currentOppLink");
+}
+
+/**
+ * show the table for Ulverstone
+ */
+function showUlverstone(){
+    removeCurrentOppTable();
+    var ulverstoneTable = document.getElementById("ulverstone");
+    ulverstoneTable.style.display = "block";
+    ulverstoneTable.classList.add("currentOpp");
+    document.getElementById("ulverstoneLink").classList.add("currentOppLink");
+}
+
+/**
+ * show the table for Somerset
+ */
+function showSomerset(){
+    removeCurrentOppTable();
+    var somersetTable = document.getElementById("somerset");
+    somersetTable.style.display = "block";
+    somersetTable.classList.add("currentOpp");
+    document.getElementById("somersetLink").classList.add("currentOppLink");
+}
+
+/**
+ * show the table for Devonport
+ */
+function showDevonport(){
+    removeCurrentOppTable();
+    var devonportTable = document.getElementById("devonport");
+    devonportTable.style.display = "block";
+    devonportTable.classList.add("currentOpp");
+    document.getElementById("devonportLink").classList.add("currentOppLink");
+}
+
+/**
+ * show the table for Smithton
+ */
+function showSmithton(){
+    removeCurrentOppTable();
+    var smithtonTable = document.getElementById("smithton");
+    smithtonTable.style.display = "block";
+    smithtonTable.classList.add("currentOpp");
+    document.getElementById("smithtonLink").classList.add("currentOppLink");
+}
