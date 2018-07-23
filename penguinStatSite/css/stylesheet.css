@@ -130,6 +130,10 @@ hr {
     border-width: 1px;
 }
 
+.noGames{
+    float: center;
+}
+
 
 @media screen and (min-width:568px) {
 

@@ -855,23 +855,6 @@
         }
       });
 
-      
-
-      // ourLossTotals.pts,ourLossTotals.fga, ourLossTotals.twoptm, ourLossTotals.twopta, ourLossTotals.threeptm, ourLossTotals.threepta, ourLossTotals.ftm, ourLossTotals.fta, ourLossTotals.oreb, ourLossTotals.reb, ourLossTotals.ast, ourLossTotals.stl,ourLossTotals.blk,ourLossTotals.to,ourLossTotals.pf,ourLossTotals.pip,ourLossTotals.scp,ourLossTotals.pft,ourLossTotals.fbp,ourLossTotals.bp;
-      
-      // ourLossTotals.fgm = 0;
-      // ourLossTotals.pts=ourLossTotals.fga= ourLossTotals.twoptm= ourLossTotals.twopta= ourLossTotals.threeptm= ourLossTotals.threepta= ourLossTotals.ftm= ourLossTotals.fta= ourLossTotals.oreb= ourLossTotals.reb= ourLossTotals.ast= ourLossTotals.stl=ourLossTotals.blk=ourLossTotals.to=ourLossTotals.pf=ourLossTotals.pip=ourLossTotals.scp=ourLossTotals.pft=ourLossTotals.fbp=ourLossTotals.bp=ourLossTotals.fgm;
-
-      
-      // console.log("separated", gameList.gameSeparatedUs);
-      // console.log("separated them", gameList.gameSeparatedThem);
-
-      // console.log("burnie", gameList.gameSeparatedUs.Burnie);
-
-            
-      // var burnieUs = gameList.gameSeparatedUs.Burnie;
-      // var burnieTotalsUs = {};
-
       //add an object holding OUR totals and averages for a specific opponent 
       for(var opponent in gameList.gameSeparatedUs){
         var ourStats = gameList.gameSeparatedUs[opponent];

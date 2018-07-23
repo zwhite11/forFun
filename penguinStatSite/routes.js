@@ -11,10 +11,10 @@
     
       $stateProvider
     
-      .state('home', {
-        url: '/',
-        templateUrl: 'home.template.html'
-      })    
+      // .state('home', {
+      //   url: '/',
+      //   templateUrl: 'home.template.html'
+      // })    
     
       // list of men's players
       .state('players', {

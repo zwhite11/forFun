@@ -598,6 +598,183 @@
 
         console.log("allstats", playerStats);
         
+
+        ////////////////specific opponent stats////////////////////
+
+        var oppList = ["Smithton", "Wynyard", "Somerset", "Burnie", "Ulverstone", "Devonport", "Latrobe"];
+
+        playerStats.oppList = oppList;
+
+        // an object for holding game separated data
+        playerStats.gameSeparated =  {
+            "Smithton" : [],
+            "Wynyard" : [],
+            "Somerset" : [],
+            "Burnie" : [],
+            "Ulverstone" : [],
+            "Devonport" : [],
+            "Latrobe" : []
+          };
+
+        // separating a players stats against specific opponents
+        playerStats.stats.forEach(function(game){
+            if(game.opponent == "Smithton"){
+              playerStats.gameSeparated.Smithton.push(game);
+            }
+            if(game.opponent == "Wynyard"){
+              playerStats.gameSeparated.Wynyard.push(game);
+            }
+            if(game.opponent == "Somerset"){
+              playerStats.gameSeparated.Somerset.push(game);
+            }
+            if(game.opponent == "Burnie"){
+              playerStats.gameSeparated.Burnie.push(game);
+            }
+            if(game.opponent == "Ulverstone"){
+              playerStats.gameSeparated.Ulverstone.push(game);
+            }
+            if(game.opponent == "Devonport"){
+              playerStats.gameSeparated.Devonport.push(game);
+            }
+            if(game.opponent == "Latrobe"){
+              playerStats.gameSeparated.Latrobe.push(game);
+            }
+          });
+
+          console.log("separated", playerStats.gameSeparated);
+
+          //add an object holding OUR totals and averages for a specific opponent 
+      for(var opponent in playerStats.gameSeparated){
+        var pStats = playerStats.gameSeparated[opponent];
+        var pTotals = {};
+
+        pTotals.mins = 0;
+        pTotals.pts = 0;
+        pTotals.fgm = 0;
+        pTotals.fga = 0;
+        pTotals.twoptm = 0;
+        pTotals.twopta = 0;
+        pTotals.threeptm = 0;
+        pTotals.threepta = 0;
+        pTotals.ftm = 0;
+        pTotals.fta = 0;
+        pTotals.oreb = 0;
+        pTotals.dreb = 0;
+        pTotals.reb = 0;
+        pTotals.ast = 0;
+        pTotals.to = 0;
+        pTotals.stl = 0;
+        pTotals.blk = 0;
+        pTotals.blkr = 0;
+        pTotals.pf = 0;
+        pTotals.flson = 0;
+        pTotals.plusMinus = 0;
+     
+
+        //add up total stats from each game against specific opponent
+        pStats.forEach(function(game){
+          // console.log("foreachgame", game);
+          pTotals.mins += game.mins;
+          pTotals.pts += game.pts;
+          pTotals.fgm += game.fgm;
+          pTotals.fga += game.fga;
+          pTotals.twoptm += game.twoptm;
+          pTotals.twopta += game.twopta;
+          pTotals.threeptm += game.threeptm;
+          pTotals.threepta += game.threepta;
+          pTotals.ftm += game.ftm;
+          pTotals.fta += game.fta;
+          pTotals.oreb += game.oreb;
+          pTotals.dreb += game.dreb;
+          pTotals.reb = pTotals.oreb + pTotals.dreb;
+          pTotals.ast += game.ast;
+          pTotals.to += game.to;
+          pTotals.stl += game.stl;
+          pTotals.blk += game.blk;
+          pTotals.blkr += game.blkr;
+          pTotals.pf += game.pf;
+          pTotals.flson += game.flson;
+          pTotals.plusMinus += game.plusMinus;
+
+        });
+
+        //calculate averages
+        var pAverages = {}
+        pAverages.mins = (pTotals.mins / pStats.length).toFixed(2);
+        pAverages.pts = (pTotals.pts / pStats.length).toFixed(2);
+        pAverages.fgm = (pTotals.fgm / pStats.length).toFixed(2);
+        pAverages.fga = (pTotals.fga / pStats.length).toFixed(2);
+        pAverages.twoptm = (pTotals.twoptm / pStats.length).toFixed(2);
+        pAverages.twopta = (pTotals.twopta / pStats.length).toFixed(2);
+        pAverages.threeptm = (pTotals.threeptm / pStats.length).toFixed(2);
+        pAverages.threepta = (pTotals.threepta / pStats.length).toFixed(2);
+        pAverages.ftm = (pTotals.ftm / pStats.length).toFixed(2);
+        pAverages.fta = (pTotals.fta / pStats.length).toFixed(2);
+        pAverages.oreb = (pTotals.oreb / pStats.length).toFixed(2);
+        pAverages.dreb = (pTotals.dreb / pStats.length).toFixed(2);
+        pAverages.reb = (pTotals.reb / pStats.length).toFixed(2);
+        pAverages.ast = (pTotals.ast / pStats.length).toFixed(2);
+        pAverages.to = (pTotals.to / pStats.length).toFixed(2);
+        pAverages.stl = (pTotals.stl / pStats.length).toFixed(2);
+        pAverages.blk = (pTotals.blk / pStats.length).toFixed(2);
+        pAverages.blkr = (pTotals.blkr / pStats.length).toFixed(2);
+        pAverages.pf = (pTotals.pf / pStats.length).toFixed(2);
+        pAverages.flson = (pTotals.flson / pStats.length).toFixed(2);
+        pAverages.plusMinus = (pTotals.plusMinus / pStats.length).toFixed(2);
+
+
+        //calculate percentages
+        pTotals.fgp = pTotals.twoptp = pTotals.threeptp = pTotals.ftp = "N/A";
+
+        if(pTotals.fga > 0){
+            pTotals.fgp = ((pTotals.fgm/pTotals.fga) * 100).toFixed(2);
+        }
+        if(pTotals.twopta > 0){
+            pTotals.twoptp = ((pTotals.twoptm/pTotals.twopta) * 100).toFixed(2);
+        }
+        if(pTotals.threepta > 0){
+            pTotals.threeptp = ((pTotals.threeptm/pTotals.threepta) * 100).toFixed(2);
+        }
+        if(pTotals.fta > 0){
+            pTotals.ftp = ((pTotals.ftm/pTotals.fta) * 100).toFixed(2); 
+        }
+        
+        //push new object to specific opponent object
+        playerStats.gameSeparated[opponent].push(pTotals);
+        playerStats.gameSeparated[opponent].push(pAverages);
+        // console.log("done", playerStats.gameSeparated[opponent]);
+
+      }
+
+      // separate game stats from totls and averages to make it easier to display
+      console.log("all of them", playerStats.gameSeparated);
+
+      var totalsAverages = {};
+
+      for(var oppArray in playerStats.gameSeparated){
+        console.log("oppArray", playerStats.gameSeparated[oppArray]);
+    
+        var aLength = playerStats.gameSeparated[oppArray].length;
+        // console.log("alength", aLength);
+
+        // if length > 2 it means the player has at least one game against that opponent
+        if(aLength > 2){
+            //slice off just the totals and averages
+            var justTandA = playerStats.gameSeparated[oppArray].slice(aLength-2);
+            totalsAverages[oppArray] = justTandA;
+            // totalsAverages.push(thisGame);
+        
+        }
+
+        playerStats.gameSeparated[oppArray].pop();
+        playerStats.gameSeparated[oppArray].pop();
+        
+
+      }
+      playerStats.totalsAverages = totalsAverages;
+      console.log("new", playerStats.gameSeparated);
+      console.log("just t and a", totalsAverages);
+
     }
     
 })();
