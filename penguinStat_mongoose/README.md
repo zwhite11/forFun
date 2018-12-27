@@ -2,6 +2,8 @@
 
 This project is the same as the Penguin Stat Site except that the data is stored with MongoDB using Mongoose and Node.js. The data is no longer stored locally in .json files.
 
+Live page [HERE](https://zwhite11.github.io/forFun/penguinStat_mongoose/#/)
+
 Stats for the 2018 senior season in the NWBU
 Stats manually input from http://websites.sportstg.com/assoc_page.cgi?c=1-4335-0-0-0&sID=402231
 Bootstrap and Angular
