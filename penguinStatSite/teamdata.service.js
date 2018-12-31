@@ -1,83 +1,78 @@
-(function () {
-    'use strict';
-    
-    angular.module('Data')
-    .service('TeamDataService', TeamDataService)
+(function() {
+  "use strict";
 
-    // inject http service to retrieve team stat files
-    TeamDataService.$inject = ['$http'];
-    function TeamDataService($http){
-        var service = this;
+  angular.module("Data").service("TeamDataService", TeamDataService);
 
-        service.getAllGames = function(){
-            var response = $http({
-                method: "GET",
-                // url: ("/forFun/penguinStatSite/teamStats/opponentStats.json")
-                url: ("/teamStats/opponentStats.json")            
+  // inject http service to retrieve team stat files
+  TeamDataService.$inject = ["$http"];
+  function TeamDataService($http) {
+    var service = this;
 
-            });
+    service.getAllGames = function() {
+      var response = $http({
+        method: "GET",
+        url: "/forFun/penguinStatSite/teamStats/opponentStats.json"
+        // url: ("/teamStats/opponentStats.json")
+      });
 
-            // console.log("response: ", response);
-            return response;
-        };
+      // console.log("response: ", response);
+      return response;
+    };
 
-        service.getGameStats = function(round){
-            var response = $http({
-                method: "GET",
-                // url: ("/forFun/penguinStatSite/teamStats/opponentStats.json")        
-                url: ("/teamStats/opponentStats.json")      
-            });  
-            service.round = round;
+    service.getGameStats = function(round) {
+      var response = $http({
+        method: "GET",
+        url: "/forFun/penguinStatSite/teamStats/opponentStats.json"
+        // url: ("/teamStats/opponentStats.json")
+      });
+      service.round = round;
 
-            return response;            
-        };
+      return response;
+    };
 
-        service.getOurStats = function(round){
-            var response = $http({
-                method: "GET",
-                // url: ("/forFun/penguinStatSite/teamStats/ourStats.json") 
-                url: ("/teamStats/ourStats.json")            
-            });  
-            service.round = round;
+    service.getOurStats = function(round) {
+      var response = $http({
+        method: "GET",
+        url: "/forFun/penguinStatSite/teamStats/ourStats.json"
+        // url: ("/teamStats/ourStats.json")
+      });
+      service.round = round;
 
-            return response;            
-        };
+      return response;
+    };
 
+    //WOMENS GAMES
 
-        //WOMENS GAMES
+    service.getAllWGames = function() {
+      var response = $http({
+        method: "GET",
+        url: "/forFun/penguinStatSite/wTeamStats/opponentStats.json"
+        // url: ("/wTeamStats/opponentStats.json")
+      });
 
-        service.getAllWGames = function(){
-            var response = $http({
-                method: "GET",
-                // url: ("/forFun/penguinStatSite/wTeamStats/opponentStats.json")  
-                url: ("/wTeamStats/opponentStats.json")            
-            });
+      // console.log("response: ", response);
+      return response;
+    };
 
-            // console.log("response: ", response);
-            return response;
-        };
+    service.getWGameStats = function(round) {
+      var response = $http({
+        method: "GET",
+        url: "/forFun/penguinStatSite/wTeamStats/opponentStats.json"
+        // url: ("/wTeamStats/opponentStats.json")
+      });
+      service.round = round;
 
-        service.getWGameStats = function(round){
-            var response = $http({
-                method: "GET",
-                // url: ("/forFun/penguinStatSite/wTeamStats/opponentStats.json") 
-                url: ("/wTeamStats/opponentStats.json")           
-            });  
-            service.round = round;
+      return response;
+    };
 
-            return response;            
-        };
+    service.getOurWStats = function() {
+      var response = $http({
+        method: "GET",
+        url: "/forFun/penguinStatSite/wTeamStats/ourStats.json"
+        // url: ("/wTeamStats/ourStats.json")
+      });
 
-        service.getOurWStats = function(){
-            var response = $http({
-                method: "GET",
-                // url: ("/forFun/penguinStatSite/wTeamStats/ourStats.json")   
-                url: ("/wTeamStats/ourStats.json")              
-            });  
-
-            return response;            
-        };
-
-    }
-    
+      return response;
+    };
+  }
 })();
