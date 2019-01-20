@@ -12,10 +12,9 @@
       var response = $http({
         method: "GET",
         url: "/forFun/penguinStatSite/teamStats/opponentStats.json"
-        // url: ("/teamStats/opponentStats.json")
+        // url: "/teamStats/opponentStats.json"
       });
 
-      // console.log("response: ", response);
       return response;
     };
 
@@ -23,7 +22,7 @@
       var response = $http({
         method: "GET",
         url: "/forFun/penguinStatSite/teamStats/opponentStats.json"
-        // url: ("/teamStats/opponentStats.json")
+        // url: "/teamStats/opponentStats.json"
       });
       service.round = round;
 
@@ -34,7 +33,7 @@
       var response = $http({
         method: "GET",
         url: "/forFun/penguinStatSite/teamStats/ourStats.json"
-        // url: ("/teamStats/ourStats.json")
+        // url: "/teamStats/ourStats.json"
       });
       service.round = round;
 
@@ -47,10 +46,9 @@
       var response = $http({
         method: "GET",
         url: "/forFun/penguinStatSite/wTeamStats/opponentStats.json"
-        // url: ("/wTeamStats/opponentStats.json")
+        // url: "/wTeamStats/opponentStats.json"
       });
 
-      // console.log("response: ", response);
       return response;
     };
 
@@ -58,7 +56,7 @@
       var response = $http({
         method: "GET",
         url: "/forFun/penguinStatSite/wTeamStats/opponentStats.json"
-        // url: ("/wTeamStats/opponentStats.json")
+        // url: "/wTeamStats/opponentStats.json"
       });
       service.round = round;
 
@@ -69,7 +67,7 @@
       var response = $http({
         method: "GET",
         url: "/forFun/penguinStatSite/wTeamStats/ourStats.json"
-        // url: ("/wTeamStats/ourStats.json")
+        // url: "/wTeamStats/ourStats.json"
       });
 
       return response;

@@ -1,14 +1,14 @@
 <!-- list of players -->
+<ng-include src="'navbar.html'"></ng-include>
 <div class="row nameList">
-  <ul class="col-lg-2">
-      <li ng-repeat="player in playersList.players" ui-sref="players.playerStats({shortName: player.short_name})" class="link">
-        {{ player.name }} 
-      </li>
-          
+  <ul class="col-lg-2 col-12">
+    <li
+      ng-repeat="player in playersList.players"
+      ui-sref="players.playerStats({shortName: player.short_name})"
+      class="link"
+    >
+      {{ player.name }}
+    </li>
   </ul>
-    <ui-view class="col-lg-10"></ui-view>
-
+  <ui-view class="col-lg-10"></ui-view>
 </div>
-
-  
-  
