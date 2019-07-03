@@ -4,7 +4,7 @@ QuickDraw is a two player game in which players compete on the same screen to te
 Included are all the files necessary to run the QuickDraw Android app.
 
 
-The app can be run on an emulator or an actual device.  It was created with Android Studio version 2.3.2. The contents of the build.gradle file are below.  QuickMaths was successfully run in Android Studio with Nexus 5x emulator (API 24).
+The app can be run on an emulator or an actual device.  It was created with Android Studio version 2.3.2. The contents of the build.gradle file are below.  QuickDraw was successfully run in Android Studio with Nexus 5x emulator (API 24).
 
 ## build.gradle
 ```
