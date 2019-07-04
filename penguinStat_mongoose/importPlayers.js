@@ -42,10 +42,10 @@ wPlayersArray.push(aj, am, br, cj, ec, et, kk, lm, mh, ms, mt, ra, sh, tm);
 
 // mongoose connection
 mongoose.Promise = global.Promise;
-mongoose.connect(
-  "mongodb://localhost/penguinStats",
-  { useNewUrlParser: true, useFindAndModify: false }
-);
+mongoose.connect("mongodb://localhost/penguinStats", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
 // import models
 const models = require("./models.js");
