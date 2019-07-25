@@ -1,0 +1,38 @@
+extends layout
+
+block content   
+    - function formatDate(date){
+        - if(date === null){ return "-"}
+        - let d = new Date(date);
+        - return (d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear())
+    - }
+    html
+    table.table
+      thead
+        tr
+          th(scope='col') Name
+          th(scope='col') Email
+          th(scope='col') Product       
+          th(scope='col') Quantity|       
+          th(scope='col') Date Entered       
+          th(scope='col') Last Updated       
+          th(scope='col') Date Completed       
+          th(scope='col') Order #       
+          th(scope='col') Edit?   
+      tbody
+        each order in orders
+            tr
+                td #{order.firstName + " " + order.lastName}
+                td #{order.email}
+                td #{order.product}
+                td #{order.quantity}
+                td #{formatDate(order.dateEntered)}
+                td #{formatDate(order.lastUpdated)}                
+                td #{formatDate(order.dateCompleted)}
+                td #{order.orderNumber}
+                td 
+                  form(action='/singleOrder', method='get')
+                    button(name='orderNumber', type='submit', value='#{order.orderNumber}') View
+                  //- a.btn.btn-info(href='/editOrder', role='button', value='#{order.orderNumber}') Edit
+
+                
