@@ -1,7 +1,0 @@
-#Thu May 24 22:47:19 AEST 2018
-base.0=C\:\\Users\\zacsw\\AndroidStudioProjects\\QuickMaths\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_11a2a9d61a8ce52d8b23b38d8564b05a1bdaeefe
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\zacsw\\AndroidStudioProjects\\QuickMaths\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_a49c0ef39de49d41393f6913fcdc3d72d95f38f0\\classes.dex
-base.1=C\:\\Users\\zacsw\\AndroidStudioProjects\\QuickMaths\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_a49c0ef39de49d41393f6913fcdc3d72d95f38f0
-file.0=C\:\\Users\\zacsw\\AndroidStudioProjects\\QuickMaths\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_11a2a9d61a8ce52d8b23b38d8564b05a1bdaeefe\\classes.dex
