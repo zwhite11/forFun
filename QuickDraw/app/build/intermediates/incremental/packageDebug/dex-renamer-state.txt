@@ -1,0 +1,7 @@
+#Sun Dec 31 13:42:06 AEDT 2017
+base.0=C\:\\Users\\zacsw\\Documents\\QuickDraw\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_27d6da7a9998c7c0d2e8dbc65014b22e7d2e39f3
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\zacsw\\Documents\\QuickDraw\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d6ffb01c0a2aebb934462c3265d322c3cd76d06c\\classes.dex
+base.1=C\:\\Users\\zacsw\\Documents\\QuickDraw\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d6ffb01c0a2aebb934462c3265d322c3cd76d06c
+file.0=C\:\\Users\\zacsw\\Documents\\QuickDraw\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_27d6da7a9998c7c0d2e8dbc65014b22e7d2e39f3\\classes.dex
