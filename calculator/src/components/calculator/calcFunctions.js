@@ -13,7 +13,6 @@ class CalcFunctions {
     result = "";
     lastOperation = [];
     operationPressed = false;
-
   }
 
   getCurrentValue() {
@@ -28,12 +27,10 @@ class CalcFunctions {
     return result;
   }
 
-
   enterDigit(digit) {
     if (currentValue == "0") {
       currentValue = digit;
-    }
-    else {
+    } else {
       if (operationPressed) {
         currentValue = digit;
         operationPressed = false;
@@ -55,8 +52,6 @@ class CalcFunctions {
     }
 
     currentValue = "0";
-
-
   }
 
   percentage() {
@@ -107,10 +102,8 @@ class CalcFunctions {
     operationPressed = true;
   }
 
-
   deactiveButton() {
     let active = document.getElementById("keypad").querySelectorAll(".active");
-    console.log("active: ", active.length);
 
     if (active.length > 0) {
       active[0].classList.remove("active");
@@ -129,9 +122,7 @@ class CalcFunctions {
       lastOperation.unshift(currentValue);
       expression = lastOperation;
       lastOperation = [];
-
-    }
-    else {
+    } else {
       expression.push(currentValue);
       lastOperation = [];
     }

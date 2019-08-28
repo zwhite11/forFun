@@ -54,8 +54,6 @@ orderController.doNewOrder = function(req, res) {
 orderController.allOrders = function(req, res) {
   checkUser(req, res);
   let result = Order.find({}, function(err, orders) {
-    // console.log("all orders", orders);
-    // console.log("reqqqq", req);
     res.render("allOrders", { user: req.user, orders: orders });
   });
 };
