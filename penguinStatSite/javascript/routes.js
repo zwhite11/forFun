@@ -17,7 +17,7 @@
       // list of men's players
       .state("players", {
         url: "/players",
-        templateUrl: "players.template.html",
+        templateUrl: "/html/players.template.html",
         controller: "PlayersController as playersList",
         resolve: {
           players: [
@@ -34,7 +34,7 @@
       // individual player's stats
       .state("players.playerStats", {
         url: "/playerStats/{shortName}",
-        templateUrl: "playerStats.template.html",
+        templateUrl: "/html/playerStats.template.html",
         controller: "StatsController as playerStats",
         resolve: {
           stats: [
@@ -65,7 +65,7 @@
       // list of games played
       .state("team", {
         url: "/team",
-        templateUrl: "team.template.html",
+        templateUrl: "/html/team.template.html",
         controller: "TeamController as gameList",
         resolve: {
           games: [
@@ -90,7 +90,7 @@
       // team stats from a specific game
       .state("team.teamStats", {
         url: "/teamStats/{round}",
-        templateUrl: "teamStats.template.html",
+        templateUrl: "/html/teamStats.template.html",
         controller: "TeamStatsController as teamStats",
         resolve: {
           stats: [
@@ -130,7 +130,7 @@
       // list of women's players
       .state("wPlayers", {
         url: "/wPlayers",
-        templateUrl: "wPlayers.template.html",
+        templateUrl: "/html/wPlayers.template.html",
         controller: "PlayersController as playersList",
         resolve: {
           players: [
@@ -147,7 +147,7 @@
       // individual women's stats
       .state("wPlayers.wPlayerStats", {
         url: "/playerStats/{shortName}",
-        templateUrl: "wPlayerStats.template.html",
+        templateUrl: "/html/wPlayerStats.template.html",
         controller: "StatsController as playerStats",
         resolve: {
           stats: [
@@ -178,7 +178,7 @@
       // list of women's games
       .state("wTeam", {
         url: "/wTeam",
-        templateUrl: "wTeam.template.html",
+        templateUrl: "/html/wTeam.template.html",
         controller: "TeamController as gameList",
         resolve: {
           games: [
@@ -203,7 +203,7 @@
       // individual game stats
       .state("wTeam.teamStats", {
         url: "/teamStats/{round}",
-        templateUrl: "teamStats.template.html",
+        templateUrl: "/html/teamStats.template.html",
         controller: "TeamStatsController as teamStats",
         resolve: {
           stats: [
