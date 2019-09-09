@@ -11,8 +11,8 @@
     service.getAllGames = function() {
       var response = $http({
         method: "GET",
-        // url: "/forFun/penguinStatSite/teamStats/opponentStats.json"
-        url: "/teamStats/opponentStats.json"
+        url: "/forFun/penguinStatSite/teamStats/opponentStats.json"
+        // url: "/teamStats/opponentStats.json"
       });
 
       return response;
@@ -21,8 +21,8 @@
     service.getGameStats = function(round) {
       var response = $http({
         method: "GET",
-        // url: "/forFun/penguinStatSite/teamStats/opponentStats.json"
-        url: "/teamStats/opponentStats.json"
+        url: "/forFun/penguinStatSite/teamStats/opponentStats.json"
+        // url: "/teamStats/opponentStats.json"
       });
       service.round = round;
 
@@ -32,8 +32,8 @@
     service.getOurStats = function(round) {
       var response = $http({
         method: "GET",
-        // url: "/forFun/penguinStatSite/teamStats/ourStats.json"
-        url: "/teamStats/ourStats.json"
+        url: "/forFun/penguinStatSite/teamStats/ourStats.json"
+        // url: "/teamStats/ourStats.json"
       });
       service.round = round;
 
@@ -45,8 +45,8 @@
     service.getAllWGames = function() {
       var response = $http({
         method: "GET",
-        // url: "/forFun/penguinStatSite/wTeamStats/opponentStats.json"
-        url: "/wTeamStats/opponentStats.json"
+        url: "/forFun/penguinStatSite/wTeamStats/opponentStats.json"
+        // url: "/wTeamStats/opponentStats.json"
       });
 
       return response;
@@ -55,8 +55,8 @@
     service.getWGameStats = function(round) {
       var response = $http({
         method: "GET",
-        // url: "/forFun/penguinStatSite/wTeamStats/opponentStats.json"
-        url: "/wTeamStats/opponentStats.json"
+        url: "/forFun/penguinStatSite/wTeamStats/opponentStats.json"
+        // url: "/wTeamStats/opponentStats.json"
       });
       service.round = round;
 
@@ -66,8 +66,8 @@
     service.getOurWStats = function() {
       var response = $http({
         method: "GET",
-        // url: "/forFun/penguinStatSite/wTeamStats/ourStats.json"
-        url: "/wTeamStats/ourStats.json"
+        url: "/forFun/penguinStatSite/wTeamStats/ourStats.json"
+        // url: "/wTeamStats/ourStats.json"
       });
 
       return response;
